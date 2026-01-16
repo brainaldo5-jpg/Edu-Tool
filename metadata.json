@@ -1,0 +1,7 @@
+{
+  "name": "EduTool Africa",
+  "description": "An offline-first educational toolkit for secondary students, replacing physical calculators, math sets, and graph books with high-performance digital tools.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
