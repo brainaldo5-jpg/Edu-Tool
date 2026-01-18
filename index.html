@@ -35,7 +35,7 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* THEME OVERRIDES: Hard-forcing colors to fix "static" issues on low-end browsers */
+        /* THEME OVERRIDES */
         html.dark body { background-color: #020617 !important; color: #f8fafc !important; }
         html.dark .bg-white { background-color: #0f172a !important; color: #f8fafc !important; }
         html.dark .bg-slate-50 { background-color: #020617 !important; }
@@ -43,23 +43,31 @@
         html.dark .border-slate-200, html.dark .border-slate-100, html.dark .border-b, html.dark .border-r { border-color: #1e293b !important; }
         html.dark .text-slate-800, html.dark .text-slate-700, html.dark .text-slate-600 { color: #e2e8f0 !important; }
         html.dark .text-slate-400 { color: #64748b !important; }
-        html.dark .shadow-sm { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important; }
         
         .toggle-dot { transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "recharts": "https://esm.sh/recharts@2.13.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-hidden">
-    <div id="root"></div>
+    <div id="root">
+        <div class="h-screen w-screen flex flex-col items-center justify-center text-center p-10 bg-white">
+            <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <h1 class="font-black text-xl uppercase tracking-tighter">Loading EduTool...</h1>
+            <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest">Digital Study Box Africa</p>
+        </div>
+    </div>
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
